@@ -52,44 +52,47 @@ class Simpleproject extends StatelessWidget {
           ],
           elevation: 10,
         ),
-        body: Container(  color: Colors.blueGrey,
-          height: 500,
-          width: double.infinity,
-          child: Column(children: [
-            Expanded(flex: 1,
-                child: Container(
-              
-              alignment: Alignment.center,
-              width: 100,
-              height: 100,
-              color: Colors.amber[200],
-              child: Text(
-                "Karol",
-                style: TextStyle(fontSize: 20),
-              ),
-            )),
-            Expanded(flex: 2,
-                child: Container(
-              alignment: Alignment.center,
-              width: 100,
-              height: 100,
-              color: Colors.blue[300],
-              child: Text(
-                "Karol",
-                style: TextStyle(fontSize: 20, color: Colors.white),
-              ),
-            )),
-            Expanded(flex: 1,
-                child: Container(
-              alignment: Alignment.center,
-              width: 100,
-              height: 100,
-              color: Colors.red[300],
-              child: Text("Karol",
-                  style: TextStyle(fontSize: 20, color: Colors.white)),
-            ))
-          ]),
-        
+        body: Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Container(  color: Colors.blueGrey,
+            height: 500,
+            width: double.infinity,
+            child: Column(children: [
+              Expanded(flex: 1,
+                  child: Container(
+                
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                color: Colors.amber[200],
+                child: Text(
+                  "Karol",
+                  style: TextStyle(fontSize: 20),
+                ),
+              )),
+              Expanded(flex: 2,
+                  child: Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                color: Colors.blue[300],
+                child: Text(
+                  "Karol",
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              )),
+              Expanded(flex: 1,
+                  child: Container(
+                alignment: Alignment.center,
+                width: 100,
+                height: 100,
+                color: Colors.red[300],
+                child: Text("Karol",
+                    style: TextStyle(fontSize: 20, color: Colors.white)),
+              ))
+            ]),
+          
+          ),
         ));
   }
 }
