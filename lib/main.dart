@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home: Simpleproject());
+    return MaterialApp(
+        debugShowCheckedModeBanner: false, home: Simpleproject());
   }
 }
 
@@ -47,11 +48,41 @@ class Simpleproject extends StatelessWidget {
         ],
         elevation: 10,
       ),
-      body: Center(
-          child: Text(
-        "Hello,Karol 👋",
-        style: TextStyle(fontSize: 40),
-      )),
+      floatingActionButton:
+          FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
+      body: Container(
+        width: 300,
+        height: 300,
+      //  transform: Matrix4.rotationZ(0.2),
+        padding: EdgeInsets.all(11),
+        margin: EdgeInsets.all(11),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: Colors.greenAccent,
+            border: Border.all(
+              color: Colors.green,width: 15
+            ),
+          //  borderRadius: BorderRadius.circular(30),
+            shape: BoxShape.circle
+           ),
+        child: Text(
+          "Four Cats..",
+          style: TextStyle(
+              fontSize: 40,
+            //  decoration: TextDecoration.underline,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.w500,
+              color: Colors.blue,
+            //  backgroundColor: Colors.white,
+              height: 2.5,
+              wordSpacing: 3,
+              letterSpacing: 1.5),
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.center,
+          textDirection: TextDirection.rtl,
+        ),
+      ),
     );
   }
 }
