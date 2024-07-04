@@ -24,124 +24,72 @@ class Simpleproject extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text(
+            "Facebook",
+            style: TextStyle(
+                fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue),
+          ),
+          centerTitle: true,
           leading: IconButton(
               onPressed: () {},
-              icon: Icon(
-                Icons.menu,
-                size: 30,
-              )),
-          title: Text("Facebook"),
-          centerTitle: true,
+              icon: Icon(Icons.menu, size: 33, color: Colors.blue)),
           actions: [
             IconButton(
                 onPressed: () {},
                 icon: Icon(
                   Icons.message,
-                  size: 25,
+                  size: 33,
+                  color: Colors.blue,
                 )),
             IconButton(
                 onPressed: () {},
                 icon: Icon(
                   Icons.search,
-                  size: 25,
+                  size: 33,
+                  color: Colors.blue,
                 ))
           ],
           elevation: 10,
         ),
-        floatingActionButton:
-            FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
-        body: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.all(10),
-          child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  width: 300,
-                  height: 300,
-                  padding: EdgeInsets.all(11),
-                  margin: EdgeInsets.all(11),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      color: Colors.greenAccent,
-                      border: Border.all(color: Colors.green, width: 15),
-                      shape: BoxShape.circle),
-                  child: Text(
-                    "Four Cats..",
-                    style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                Text(
-                  "Karoo",
-                  style: TextStyle(
-                      backgroundColor: Colors.grey,
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.favorite,
-                      size: 80,
-                      color: Colors.red,
-                    )),
-                SizedBox(
-                  width: 50,
-                ),
-                Container(
-                  width: 300,
-                  height: 300,
-                  padding: EdgeInsets.all(11),
-                  margin: EdgeInsets.all(11),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      color: Colors.greenAccent,
-                      border: Border.all(color: Colors.green, width: 15),
-                      shape: BoxShape.circle),
-                  child: Text(
-                    "Four Cats..",
-                    style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                Text(
-                  "Karoo",
-                  style: TextStyle(
-                      fontSize: 35,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-                SizedBox(
-                  width: 25,
-                ),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.favorite,
-                      size: 80,
-                      color: Colors.red,
-                    ))
-              ]),
+        body: Container(  color: Colors.blueGrey,
+          height: 500,
+          width: double.infinity,
+          child: Column(children: [
+            Expanded(flex: 1,
+                child: Container(
+              
+              alignment: Alignment.center,
+              width: 100,
+              height: 100,
+              color: Colors.amber[200],
+              child: Text(
+                "Karol",
+                style: TextStyle(fontSize: 20),
+              ),
+            )),
+            Expanded(flex: 2,
+                child: Container(
+              alignment: Alignment.center,
+              width: 100,
+              height: 100,
+              color: Colors.blue[300],
+              child: Text(
+                "Karol",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+            )),
+            Expanded(flex: 1,
+                child: Container(
+              alignment: Alignment.center,
+              width: 100,
+              height: 100,
+              color: Colors.red[300],
+              child: Text("Karol",
+                  style: TextStyle(fontSize: 20, color: Colors.white)),
+            ))
+          ]),
+        
         ));
   }
 }
