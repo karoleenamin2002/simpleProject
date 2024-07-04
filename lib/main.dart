@@ -51,8 +51,9 @@ class Simpleproject extends StatelessWidget {
         floatingActionButton:
             FloatingActionButton(onPressed: () {}, child: Icon(Icons.add)),
         body: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
           padding: EdgeInsets.all(10),
-          child: Column(
+          child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -76,25 +77,31 @@ class Simpleproject extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 25,),
+                SizedBox(
+                  width: 25,
+                ),
                 Text(
                   "Karoo",
-                  style: TextStyle(backgroundColor: Colors.grey,
+                  style: TextStyle(
+                      backgroundColor: Colors.grey,
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
-                                SizedBox(height: 25,),
-
+                SizedBox(
+                  width: 25,
+                ),
                 IconButton(
                     onPressed: () {},
                     icon: Icon(
                       Icons.favorite,
                       size: 80,
                       color: Colors.red,
-                    )),                SizedBox(height: 35,),
-
-                    Container(
+                    )),
+                SizedBox(
+                  width: 50,
+                ),
+                Container(
                   width: 300,
                   height: 300,
                   padding: EdgeInsets.all(11),
@@ -114,7 +121,9 @@ class Simpleproject extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-                SizedBox(height: 25,),
+                SizedBox(
+                  width: 25,
+                ),
                 Text(
                   "Karoo",
                   style: TextStyle(
@@ -122,8 +131,9 @@ class Simpleproject extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       color: Colors.black),
                 ),
-                                SizedBox(height: 25,),
-
+                SizedBox(
+                  width: 25,
+                ),
                 IconButton(
                     onPressed: () {},
                     icon: Icon(
