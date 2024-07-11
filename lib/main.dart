@@ -52,111 +52,19 @@ class Simpleproject extends StatelessWidget {
         ],
         elevation: 10,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              margin: EdgeInsets.only(bottom: 30),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.blueGrey),
-              width: double.infinity,
-              height: 400,
-              child: Text(
-                "Karoleen Ameen",
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
-            ),
-            Container(color: Colors.blue[200],width: 250,height: 200,margin: EdgeInsets.all(15),padding: EdgeInsets.all(6),
-              child: Center(
-                child: Wrap(alignment: WrapAlignment.end,direction: Axis.vertical,
-                spacing: 40,
-                runSpacing: 30,
-                  children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      child: Text("click",style: TextStyle(fontSize: 30),),
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.amber[300]),
-                              foregroundColor: MaterialStatePropertyAll(Colors.blue[200]),
-                              padding: MaterialStatePropertyAll(EdgeInsets.all(7)),
-                              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))),
-                    ),
-                      ElevatedButton(
-                      onPressed: () {},
-                      child: Text("click",style: TextStyle(fontSize: 30)),
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.amber[300]),
-                              foregroundColor: MaterialStatePropertyAll(Colors.blue[200]),
-                              padding: MaterialStatePropertyAll(EdgeInsets.all(7)),
-                              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))),
-                    ),
-                      ElevatedButton(
-                      onPressed: () {},
-                      child:Text("click",style: TextStyle(fontSize: 30)),
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.amber[300]),
-                              foregroundColor: MaterialStatePropertyAll(Colors.blue[200]),
-                              padding: MaterialStatePropertyAll(EdgeInsets.all(7)),
-                              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))),
-                    ),
-                      ElevatedButton(
-                      onPressed: () {},
-                      child: Text("click",style: TextStyle(fontSize: 30)),
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.amber[300]),
-                              foregroundColor: MaterialStatePropertyAll(Colors.blue[200]),
-                              padding: MaterialStatePropertyAll(EdgeInsets.all(7)),
-                              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))),
-                    ),
-                      ElevatedButton(
-                      onPressed: () {},
-                      child: Text("click",style: TextStyle(fontSize: 30)),
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.amber[300]),
-                              foregroundColor: MaterialStatePropertyAll(Colors.blue[200]),
-                              padding: MaterialStatePropertyAll(EdgeInsets.all(7)),
-                              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))),
-                    ),
-                      ElevatedButton(
-                      onPressed: () {},
-                      child: Text("click",style: TextStyle(fontSize: 30)),
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStatePropertyAll(Colors.amber[300]),
-                              foregroundColor: MaterialStatePropertyAll(Colors.blue[200]),
-                              padding: MaterialStatePropertyAll(EdgeInsets.all(7)),
-                              shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)))),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(bottom: 30),
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.blueGrey),
-              width: double.infinity,
-              height: 400,
-              child: Text(
-                "Karoleen Ameen",
-                style: TextStyle(color: Colors.white, fontSize: 30),
-              ),
-            ),
-          ],
-        ),
+      body: Column(
+        children: [
+          Text(
+            "Karoleen Ameen",
+            style: TextStyle(
+                fontSize: 90,
+                fontWeight: FontWeight.w400,
+                fontFamily: "myfont"),
+          ),
+          
+          CircleAvatar(radius: 55,backgroundImage: AssetImage('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Fflower&psig=AOvVaw1q607rKafY1vMtQM6hMPxK&ust=1720781137687000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjs7rbnnocDFQAAAAAdAAAAABAE',
+),)
+        ],
       ),
     );
   }
