@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,19 +53,61 @@ class Simpleproject extends StatelessWidget {
         ],
         elevation: 10,
       ),
-      body: Column(
-        children: [
-          Text(
-            "Karoleen Ameen",
-            style: TextStyle(
-                fontSize: 90,
-                fontWeight: FontWeight.w400,
-                fontFamily: "myfont"),
-          ),
-          
-          CircleAvatar(radius: 55,backgroundImage: AssetImage('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fphotos%2Fflower&psig=AOvVaw1q607rKafY1vMtQM6hMPxK&ust=1720781137687000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLjs7rbnnocDFQAAAAAdAAAAABAE',
-),)
-        ],
+      body: SizedBox(width: double.infinity,
+        child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(margin: EdgeInsets.only(top: 20),
+              child: Text(
+                "Karoleen Ameen",
+                style: TextStyle(
+                    fontSize: 90,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: "myfont"),
+              ),
+            ),
+            Container(margin: EdgeInsets.only(bottom: 44),
+              child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(padding: EdgeInsets.all(10),
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(color: Colors.blue,width: 1)),
+                      child: SvgPicture.asset(
+                        "asset/images/face.svg",
+                        height: 20,
+                        color: Colors.blue[700],
+                      )),
+                  SizedBox(width: 15,),
+                      Container(padding: EdgeInsets.all(10),
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(color: Colors.blue,width: 1)),
+                      child: SvgPicture.asset(
+                        "asset/images/insta.svg",
+                        height: 20,
+                        color: Colors.blue[700],
+                      )),
+                      SizedBox(width: 15,),
+                      Container(padding: EdgeInsets.all(10),
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(color: Colors.blue,width: 1)),
+                      child: SvgPicture.asset(
+                        "asset/images/twitter.svg",
+                        height: 20,
+                        color: Colors.blue[700],
+                      )),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
