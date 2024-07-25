@@ -24,90 +24,82 @@ class Simpleproject extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        elevation: 0,
         title: Text(
-          "Facebook",
-          style: TextStyle(
-              fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue),
+          "My Profile",
+          style: TextStyle(fontSize: 30),
         ),
         centerTitle: true,
-        leading: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.menu, size: 33, color: Colors.blue)),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.message,
-                size: 33,
-                color: Colors.blue,
-              )),
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search,
-                size: 33,
-                color: Colors.blue,
-              ))
-        ],
-        elevation: 10,
+        backgroundColor: Colors.grey[800],
       ),
-      body: SizedBox(width: double.infinity,
-        child: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(margin: EdgeInsets.only(top: 20),
-              child: Text(
-                "Karoleen Ameen",
-                style: TextStyle(
-                    fontSize: 90,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: "myfont"),
-              ),
+      body: Container(margin: EdgeInsets.only(left: 25),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+          Container(
+            margin: EdgeInsets.only(top: 22),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                CircleAvatar(radius: 60,
+                    backgroundImage: AssetImage("asset/images/flower1.jpg")),
+                SizedBox(
+                  width: 5,
+                ),
+                Icon(
+                  Icons.verified,
+                  color: Colors.blue[500],
+                  size: 22,
+                )
+              ],
             ),
-            Container(margin: EdgeInsets.only(bottom: 44),
-              child: Row(mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(padding: EdgeInsets.all(10),
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(color: Colors.blue,width: 1)),
-                      child: SvgPicture.asset(
-                        "asset/images/face.svg",
-                        height: 20,
-                        color: Colors.blue[700],
-                      )),
-                  SizedBox(width: 15,),
-                      Container(padding: EdgeInsets.all(10),
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(color: Colors.blue,width: 1)),
-                      child: SvgPicture.asset(
-                        "asset/images/insta.svg",
-                        height: 20,
-                        color: Colors.blue[700],
-                      )),
-                      SizedBox(width: 15,),
-                      Container(padding: EdgeInsets.all(10),
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          border: Border.all(color: Colors.blue,width: 1)),
-                      child: SvgPicture.asset(
-                        "asset/images/twitter.svg",
-                        height: 20,
-                        color: Colors.blue[700],
-                      )),
-                ],
-              ),
-            )
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 33,
+          ),
+          Text(
+            "Name : ",
+            style: TextStyle(color: Colors.grey[50], fontSize: 17),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "Karoleen Ameen",
+            style: TextStyle(
+                fontFamily: "myfont",
+                color: Colors.amberAccent,
+                fontSize: 25,
+                fontWeight: FontWeight.w800),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Text(
+            "Current Level : ",
+            style: TextStyle(color: Colors.grey[50], fontSize: 17),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "8",
+            style: TextStyle(
+                fontFamily: "myfont",
+                color: Colors.amberAccent,
+                fontSize: 25,
+                fontWeight: FontWeight.w800),
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Row(children: [
+            Icon(Icons.email,color: Colors.grey[50],size: 20,),
+            SizedBox(width: 10,),
+            Text("karolamin55@gmail.com",style: TextStyle(color:Colors.grey[200] ),)
+          ],)
+        ]),
       ),
     );
   }
