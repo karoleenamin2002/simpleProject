@@ -24,82 +24,68 @@ class Simpleproject extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
-      appBar: AppBar(
-        elevation: 0,
-        title: Text(
-          "My Profile",
-          style: TextStyle(fontSize: 30),
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.grey[800],
-      ),
-      body: Container(margin: EdgeInsets.only(left: 25),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
-          Container(
-            margin: EdgeInsets.only(top: 22),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(radius: 60,
-                    backgroundImage: AssetImage("asset/images/flower1.jpg")),
-                SizedBox(
-                  width: 5,
+      body: Container(
+        width: double.infinity,
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 50,
+                width: 500,
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.purple[300]),
+                child: TextField(
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Your Email:",
+                        prefixIcon: Icon(
+                          Icons.person,
+                          color: Colors.purple[900],
+                        ))),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 50,
+                width: 500,
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Colors.purple[300]),
+                child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: "Password:",
+                        prefixIcon: Icon(
+                          Icons.lock,
+                          color: Colors.purple[900],
+                        ),
+                        suffixIcon: Icon(Icons.visibility))),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                    fontSize: 30,
+                  ),
                 ),
-                Icon(
-                  Icons.verified,
-                  color: Colors.blue[500],
-                  size: 22,
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 33,
-          ),
-          Text(
-            "Name : ",
-            style: TextStyle(color: Colors.grey[50], fontSize: 17),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "Karoleen Ameen",
-            style: TextStyle(
-                fontFamily: "myfont",
-                color: Colors.amberAccent,
-                fontSize: 25,
-                fontWeight: FontWeight.w800),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Text(
-            "Current Level : ",
-            style: TextStyle(color: Colors.grey[50], fontSize: 17),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            "8",
-            style: TextStyle(
-                fontFamily: "myfont",
-                color: Colors.amberAccent,
-                fontSize: 25,
-                fontWeight: FontWeight.w800),
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Row(children: [
-            Icon(Icons.email,color: Colors.grey[50],size: 20,),
-            SizedBox(width: 10,),
-            Text("karolamin55@gmail.com",style: TextStyle(color:Colors.grey[200] ),)
-          ],)
-        ]),
+                style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStatePropertyAll(Colors.purple[900]),
+                    padding: MaterialStatePropertyAll(EdgeInsets.symmetric(
+                        horizontal: 220, vertical: 15)),shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(66)))),
+              ),
+            ]),
       ),
     );
   }
